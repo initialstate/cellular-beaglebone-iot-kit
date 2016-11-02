@@ -17,4 +17,5 @@ while True:
 	if value>800:
 		level="very bright"
   	print value
+	print level
   	sleep(30)
