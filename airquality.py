@@ -9,11 +9,11 @@ ADC.setup()
 while True:
 	value=ADC.read_raw(pin)
 	if value > 700:
-        level="High pollution"
-  elif value > 300:
-        level="Low pollution"
-  else:
-        level="Air fresh"
-  print value
-	print level
-  sleep(30)
+        	level="High pollution"
+      	elif value > 300:
+        	level="Low pollution"
+  	else:
+        	level="Air fresh"
+  	print value
+  	print level
+  	sleep(30)
