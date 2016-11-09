@@ -151,11 +151,11 @@ def read_air ():
 	value=ADC.read_raw(AIR_SENSOR)
 	if value > 700:
         level="High pollution"
-    elif value > 300:
+        elif value > 300:
         level="Low pollution"
-    else:
+        else:
         level="Air fresh"
-    streamer.log(":wind_blowing_face:Air Quality",level)
+        streamer.log(":wind_blowing_face:Air Quality",level)
 
 
 conditions = get_conditions()
@@ -218,12 +218,12 @@ while True:
 					streamer.log(":umbrella: " + CITY + " Precip 1 Hour(IN)",conditions['current_observation']['precip_1hr_in'])
 				if isFloat(conditions['current_observation']['precip_today_in']):
 					streamer.log(":umbrella: " + CITY + " Precip Today(IN)",conditions['current_observation']['precip_today_in'])
-			if isFloat(conditions['current_observation']['solarradiation']):
-				streamer.log(":sunny: " + CITY + " Solar Radiation (watt/m^2)",conditions['current_observation']['solarradiation'])
-			if isFloat(humidity):
-				streamer.log(":droplet: " + CITY + " Humidity(%)",humidity)
-			if isFloat(conditions['current_observation']['UV']):
-				streamer.log(":sunny: " + CITY + " UV Index:",conditions['current_observation']['UV'])
+			        if isFloat(conditions['current_observation']['solarradiation']):
+				        streamer.log(":sunny: " + CITY + " Solar Radiation (watt/m^2)",conditions['current_observation']['solarradiation'])
+			        if isFloat(humidity):
+				        streamer.log(":droplet: " + CITY + " Humidity(%)",humidity)
+			        if isFloat(conditions['current_observation']['UV']):
+				        streamer.log(":sunny: " + CITY + " UV Index:",conditions['current_observation']['UV'])
 			counter=0
 	else:
 		counter=counter+1
